@@ -1,5 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import './project-button.css';
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
@@ -12,18 +13,21 @@ export const Projects = () => {
   const projects = [
     {
       title: "Ecommerce Sanity Full Stack App",
-      description: "Fully responsive full-stack e-commerce app with modern design, animations, product page, cart functionality, and Stripe payment integration. CMS Sanity allows easy product management.",
+      description: "Fully responsive full-stack e-commerce app with modern design, animations, product page, cart functionality, and Stripe payment. ",
       imgUrl: projImg1,
+      hostedLink: 'https://ecommerce-sanity-stripe-fawn.vercel.app/',
     },
     {
       title: "Saurabh Ecommerce React App",
       description: "Developed a modern e-commerce platform with Firebase authentication for login functionality, featuring a responsive user interface built with Chakra UI and React JS. ",
       imgUrl: projImg2,
+      hostedLink: 'https://saurabh-ecommerce-react.vercel.app/' ,
     },
     {
       title: "Gallery React App",
-      description: "Developed a responsive image gallery app with Pixabay API integration, allowing users to search and view images in a visually appealing layout. ",
+      description: "Developed a responsive image gallery app with Pixabay API integration, allowing users to search and view images in a seamlessly. ",
       imgUrl: projImg3,
+      hostedLink: 'https://saurabh-gallery.vercel.app/' ,
     },
     // {
     //   title: "Business Startup",
@@ -43,7 +47,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -72,7 +76,7 @@ export const Projects = () => {
                             return (
                               <ProjectCard
                                 key={index}
-                                {...project}
+                                myProject = {project}
                                 />
                             )
                           })
